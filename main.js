@@ -1,6 +1,7 @@
-// Главная функция.
-// Считывает аргументы с веб-страницы, выбирает операцию,
-// передаёт управление вычисляющей функции и выводит результат
+// Р“Р»Р°РІРЅР°СЏ С„СѓРЅРєС†РёСЏ.
+// РЈС‡РёС‚С‹РІР°РµС‚ Р°СЂРіСѓРјРµРЅС‚С‹ СЃ РІРµР±-СЃС‚СЂР°РЅРёС†С‹, РІС‹Р±РёСЂР°РµС‚ РѕРїРµСЂР°С†РёСЋ,
+// РїРµСЂРµРґР°С‘С‚ СѓРїСЂР°РІР»РµРЅРёРµ РІС‹С‡РёСЃР»В¤СЋС‰РµР№ С„СѓРЅРєС†РёРё Рё РІС‹РІРѕРґРёС‚ СЂРµР·СѓР»СЊС‚Р°С‚
+
 function calculate(){
   var arg1 = Number(document.getElementById('idArg1').value);
   var arg2 = Number(document.getElementById('idArg2').value);
@@ -33,7 +34,7 @@ function calculate(){
     case 'circlePeriphery': result=circlePeriphery(arg1); break;
     case 'circleSquare': result=(arg1); break;
     case 'gradRad': result=gradRad(arg1); break;
-    case 'RadGrad': result=RadGrad(arg1, arg2); break;
+    case 'RadGrad': result=RadGrad(arg1); break;
     default: alert('Error! The variable \'operation\' has value '+operation);
   }
 
