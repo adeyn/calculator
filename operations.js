@@ -1,4 +1,4 @@
-//Функции для реализации
+// Р¤СѓРЅРєС†РёРё РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё
 
 function sum() {
 }
@@ -27,7 +27,7 @@ function root2() {
 function rootX() {
 }
 
-function logarithmE(x1) {  //делает Мальвина
+function logarithmE(x1) {  //РґРµР»Р°РµС‚ РњР°Р»СЊРІРёРЅР°
   console.log('Function logarithmE is launched.');
   if (typeof x1 != 'number')
     return 'Error! The function logarithmE received incorrect value'
