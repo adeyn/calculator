@@ -1,36 +1,35 @@
 // Функции для реализации
 
 function sum(a,b) {     // функция сложения, входящие данные - два числа
-var c;                  // переменная в которую записываем сумму
-c=a+b;                  // сложение двух чисел и запись результата в "с"      
-return (c);             // возврат результата суммирования двух чисел
+    var c = a + b;      // переменная в которую записываем сумму
+    return c;           // сложение двух чисел и запись результата в "с"      
+}                       // возврат результата суммирования двух чисел
+
+function sub(arg1, arg2) { //Аня
 }
 
-function sub() {
+function mul(arg1, arg2) { //Саша
 }
 
-function mul() {
+function div(arg1, arg2) { //Саша
 }
 
-function div() {
+function module(arg1, arg2) { //Ваня
 }
 
-function module() {
+function construction2(arg1) { // Яна
 }
 
-function construction2() {
+function constructionX(arg1, arg2) { // Яна
 }
 
-function constructionX() {
+function root2(arg1) { // Андрей
 }
 
-function root2() {
+function rootX(arg1, arg2) { // Андрей
 }
 
-function rootX() {
-}
-
-function logarithmE(x1) {  //делает Мальвина
+function logarithmE(x1) {   //делает Мальвина
   console.log('Function logarithmE is launched.');
   if (typeof x1 != 'number')
     return 'Error! The function logarithmE received incorrect value'
@@ -38,23 +37,23 @@ function logarithmE(x1) {  //делает Мальвина
     return Math.log(x1);
 }
 
-function logarithm10() {
+function logarithm10(arg1) { // Витя
 }
 
-function logarithmX() {
+function logarithmX(arg1, arg2) { // Витя
 }
 
-function circlePeriphery() {
+function circlePeriphery(arc1) { // Карина
 }
 
 function circleSquare(r) {  // функция площади круга, входящее число - радиус
     var s;                  // переменная в которую записываем площадь
     s=3.14*Math.pow(r,2);   // вычисление площади круга по формуле      
-    return (s);             // возврат результата плащади круга
+    return s;               // возврат результата плащади круга
 }
 
-function gradRad() {
+function gradRad(arc1) { // Катя
 }
 
-function RadGrad() {
+function RadGrad(arg1) { // Катя
 }
