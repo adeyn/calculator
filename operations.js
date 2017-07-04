@@ -1,6 +1,6 @@
-//Функции для реализации
+// Функции для реализации
 
-function sum(arg1, arg2) { //Аня
+function sum(arg1, arg2) { 
 }
 
 function sub(arg1, arg2) { //Аня
