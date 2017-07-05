@@ -54,11 +54,13 @@ body {
     width: 50px;
     border: solid 1px #ff79ce;
     border-radius: 5px;
+    background: #ff79ce;
     background: linear-gradient(to top, #ff79ce, #ffc0e0);
     font-weight: bold;
 }
 
 #calculator button:hover {
+    background: #830759;
     background: linear-gradient(to top, #830759, #ba077d);
     color: white;
 }
