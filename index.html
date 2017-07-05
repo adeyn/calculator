@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Изучаем GIT: калькулятор</title>
+  <link rel='stylesheet' href='reset.css'>
+
+  <style>
+    #navBar {    /* стиль фона под навигационными клавишами */
+      background-color: maroon;
+      padding-left: 10px;
+    }
+    nav>a {      /* стиль вкладок */
+      display: inline-block;
+      width: 120px;
+      text-align: center;
+      font-size: 1.25em;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      padding: 5px;
+      margin: 10px 5px 0;
+      border-color: black;
+      border-width: 3px;
+      border-style: solid solid none;
+      background-color: silver;
+      border-radius: 10px 10px 0 0; }
+    a.active {    /* изменение стиля в активной вкладке */
+      background-color: white; }
+  </style>
+
+  <script>
+    // Определяем, какой интерфейс будет показываться при загрузке и перезагрузке.
+    // Нельзя удовлетвориться простым прописание значения в свойстве src тега iframe,
+    // поскольку содержимое iframe при перезагрузке сохраняется.
+    function fInitialization() {
+      document.getElementsByTagName('iframe')[0].src='calculator.html';
+      console.log('Initialization is done');
+    }
+    // изменяем местоположение стиля "активной вкладки"
+    function changeTab(elem) {
+      var arList = document.getElementById('navBar').getElementsByTagName('a');
+      for (var i=0; i<arList.length; i++)
+        if (arList[i] != elem)
+          arList[i].className = ''
+        else
+          elem.className = 'active';
+    }
+  </script>
+
+</head>
+<body onLoad='fInitialization()'>
+
+<!-- Панель навигации -->
+<nav id='navBar'>
+  <a href='calculator.html' target='mainFrame' class='active' onclick='changeTab(this);'>Интерфейс 1</a>
+  <a href='calculator2.html' target='mainFrame' onclick='changeTab(this);'>Интерфейс 2</a>
+  <a href='calculator3.html' target='mainFrame' onclick='changeTab(this);'>Интерфейс 3</a>
+</nav>
+
+<!-- Плавающий фрейм, внутри которого выводим различные интерфейсы -->
+<iframe name='mainFrame' src='' width='100%' height='600' style='border-style:none; margin:30px 5px'>
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+</body>
+</html>
