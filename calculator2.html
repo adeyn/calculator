@@ -3,47 +3,95 @@
 <head>
   <meta charset='utf-8'>
   <title>Калькулятор: интерфейс 2</title>
+  <link rel='stylesheet' href='reset.css'>
   <script src='main.js' defer></script>
   <script src='operations.js' defer></script>
-
+  <script src='calculator2.js' defer></script>
+  
   <style>
+    table {
+      background-color:#ffbbff;
+      margin:10px auto;
+      border-width: thin;
+      border-style: outset;
+      border-spacing: 2px;
+      border-collapse: separate;
+    }
+    td {
+      border-width: thin;
+      border-style: inset;
+      padding: 1px; 
+    }
     td>button {
       width: 50px;
       height: 50px;
       font-weight: bold;
       margin: 3px;
     }
+    #inOutField {
+      width: 237px;  /*вследствие точного задания размера потенциально возможны проблемы с выравниванием*/
+      border-width: 0;
+      font-family: 'Times New Roman', serif;
+      border-style: none;
+      font-size:1.5em;
+      font-weight:bold;
+      padding: 15px 3px;
+      text-align:right;
+      background-color:#ffffff;
+    }
+    #calculatedExpression {
+      position: absolute;
+      top: 1px;
+      left: 3px;
+      font-size: 0.8em;
+      color: grey;
+    }
   </style>
+  <script>
+    // При перезагрузке поле ввода калькулятора обнулится.
+    // Нельзя удовлетвориться простым прописание значения в свойстве value,
+    // поскольку при перезагрузке оно сохраняется.
+    function fInitialization() {
+      document.getElementById('inOutField').value='0';
+    }
+  </script>
 </head>
-<body>
+<body onLoad='fInitialization()'>
 
-<table border="1" style="background-color:#ffbbff; color:#000000; margin:10px auto;"> 
+<table> 
+  <td colspan='4' style='padding:0; position:relative'>
+    <div id='calculatedExpression'></div>
+    <input type='text' id='inOutField' value='0'>
+  </td>
   <tr>
-    <td colspan="4" style="font-size:1.5em; font-weight:bold; padding: 15px 2px; text-align:right; background-color:#ffffff;">0</td>
+    <td><button onclick="fInsetChar('1')">1</button></td>
+    <td><button onclick="fInsetChar('2')">2</button></td>
+    <td><button onclick="fInsetChar('3')">3</button></td>
+    <td><button onclick="fInsetChar('+')">+</button></td>
   </tr>
   <tr>
-    <td><button>1</button></td>
-    <td><button>2</button></td>
-    <td><button>3</button></td>
-    <td><button>+</button></td>
+    <td><button onclick="fInsetChar('4')">4</button></td>
+    <td><button onclick="fInsetChar('5')">5</button></td>
+    <td><button onclick="fInsetChar('6')">6</button></td>
+    <td><button onclick="fInsetChar('-')">-</button></td>
   </tr>
   <tr>
-    <td><button>4</button></td>
-    <td><button>5</button></td>
-    <td><button>6</button></td>
-    <td><button>-</button></td>
+    <td><button onclick="fInsetChar('7')">7</button></td>
+    <td><button onclick="fInsetChar('8')">8</button></td>
+    <td><button onclick="fInsetChar('9')">9</button></td>
+    <td><button onclick="fInsetChar('*')">*</button></td>
   </tr>
   <tr>
-    <td><button>7</button></td>
-    <td><button>8</button></td>
-    <td><button>9</button></td>
-    <td><button>*</button></td>
+    <td><button onclick="fInsetChar('0')">0</button></td>
+    <td><button onclick="fInsetChar('.')">.</button></td>
+    <td><button onclick="alert('I yet don\'t have command')">&nbsp;</button></td>
+    <td><button onclick="fInsetChar('/')">/</button></td>
   </tr>
   <tr>
-    <td><button>C</button></td>
-    <td><button>0</button></td>
-    <td><button>=</button></td>
-    <td><button>/</button></td>
+    <td><button onclick="fClearField()">C</button></td>
+    <td><button onclick="fDeleteLastCh()">&larr;</button></td>
+    <td><button onclick="alert('I yet don\'t have command')">&nbsp;</button></td>
+    <td><button onclick="fCalculateExpression()">=</button></td>
   </tr>
 </table>
 

@@ -11,41 +11,54 @@ function sub(arg1, arg2) { //Аня
 }
 
 function mul(arg1, arg2) { //Саша
+  return "'mul()' ещё не реализовано";
 }
 
 function div(arg1, arg2) { //Саша
+  return "'div()' ещё не реализовано";
 }
 
 function module(arg1, arg2) { //Ваня
+  return 'Ещё не реализовано';
 }
 
 function power2(arg1) { // Яна
+  return 'Ещё не реализовано';
 }
 
 function powerX(arg1, arg2) { // Яна
+  return 'Ещё не реализовано';
 }
 
 function root2(arg1) { // Андрей
+  return 'Ещё не реализовано';
 }
 
 function rootX(arg1, arg2) { // Андрей
+  return 'Ещё не реализовано';
 }
 
 function logarithmE(x1) {   // Мальвина
+    // выводим сообщение в лог, что функция получила управление - для отладки
   console.log('Function logarithmE is launched.');
-  if (typeof x1 != 'number')
-    return 'Error! The function logarithmE received incorrect value'
+    // проверяем, что нам передано именно число, иначе выбрасываем сообщение об ошибке
+  if (typeof x1 != 'number') {
+    alert('Ошибка! Функция logarithmE получила неверное значение');
+    return 'ERROR'; }
   else
     return Math.log(x1);
 }
 
 function logarithm10(arg1) { // Витя
+  return 'Ещё не реализовано';
 }
 
 function logarithmX(arg1, arg2) { // Витя
+  return 'Ещё не реализовано';
 }
 
 function circlePeriphery(arc1) { // Карина
+  return 'Ещё не реализовано';
 }
 
 function circleSquare(r) {          // функция площади круга, входящее число - радиус
@@ -54,7 +67,9 @@ function circleSquare(r) {          // функция площади круга,
 }                                   // возврат результата плащади круга
 
 function gradRad(arc1) { // Катя
+  return 'Ещё не реализовано';
 }
 
 function RadGrad(arg1) { // Катя
+  return 'Ещё не реализовано';
 }
